@@ -20,7 +20,6 @@ pids/
 .env.test
 .env.*.local
 
-appcopy.js
 
 # Optional npm cache directory
 .npm/
