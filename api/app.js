@@ -9,7 +9,7 @@ const userRouter = require('../Route/UserRoute')
 const app = express()
 app.use(bodyParser.json())
 app.use(cors({
-    origin:'http://localhost:5173'
+    origin:'https://ultimateqrbackend.vercel.app'
 }))
 
 // All route initiate here
