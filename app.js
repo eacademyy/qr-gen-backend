@@ -3,6 +3,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 const db = require('./db')
+const serverlese = require('serverless-http')
 
 // const userModel = require('./Model/User')
 
@@ -18,10 +19,13 @@ app.use(cors({
 // All route initiate here
 app.use('/userapi',userRouter)
 
-const port = process.env.PORT
+
+module.exports = app
+module.exports.handler = serverlese(app)
+// const port = process.env.PORT
 
 
 
-app.listen(port,(req,res)=>{
-    console.log(`Server is running on : http://localhost:${port}`)
-})
+// app.listen(port,(req,res)=>{
+//     console.log(`Server is running on : http://localhost:${port}`)
+// })
