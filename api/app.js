@@ -2,13 +2,13 @@ require('dotenv').config()
 const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
-const db = require('./db')
+const db = require('../db')
 const serverlese = require('serverless-http')
 
 // const userModel = require('./Model/User')
 
 // all router will be here
-const userRouter = require('./Route/UserRoute')
+const userRouter = require('../Route/UserRoute')
 
 const app = express()
 app.use(bodyParser.json())

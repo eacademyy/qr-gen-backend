@@ -1,19 +1,15 @@
 {
     "version": 2,
-    "build": {
-      "env": {
-        "NODE_ENV": "production"
-      }
-    },
     "functions": {
-      "app.js": {
+      "api/app.js": {
         "runtime": "vercel-nodejs@3.0.0"
       }
     },
     "routes": [
       {
         "src": "/userapi/(.*)",
-        "dest": "/app.js"
+        "dest": "/api/app.js"
       }
     ]
   }
+  
